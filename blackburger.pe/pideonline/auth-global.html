@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- Mirrored from blackburger.pe/pideonline/auth-global by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Jun 2022 20:17:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="cache-control" content="max-age=604800" />
+	<meta http-equiv="expires" content="0" />
+	<link rel="alternate" hreflang="es" href="index.html">
+	<link rel="alternate" hreflang="en" href="en.html">
+	<meta charset="utf-8">
+	<link rel="canonical" href="auth-global.html" />
+	<!-- Metatags -->
+	<meta name="description" content=""/>
+	<meta name="robots" content="index, follow" />
+	<meta name="keywords" content=", restaurante, delivery, take out, para llevar, MESA 24/7" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="HandheldFriendly" content="true">
+	<meta property="og:site_name" content="MESA 24/7" />
+	<meta property="og:type" content="website" />
+	<meta property="fb:admins" content="0" />
+	<meta property="og:url" content="auth-global.html" />
+	<meta property="og:title" content=" Restaurante - Pide Delivery o Take out" />
+	<meta property="og:image" content="" />
+	<link rel="profile" href="https://gmpg.org/xfn/11"/>
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="Vm1yfzHudiLmZz7cyGskpOfQlNuwv8HsyHGpcJYs">
+	<!-- Favicon -->
+	<link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	<title> Restaurante - Pide Delivery o Take out</title>
+	<link href="css/app85d6.css?id=06dabeb247f58cf86901" rel="stylesheet" type="text/css" >
+	<link href="https://gateway.mesa247.pe/index.php/rbcss/local/auth-global/?t=1656620252" rel="stylesheet" type="text/css" >
+	<meta name="locale" content="es">
+		<style>
+.main-image{
+	filter: blur(4px);
+	-webkit-filter: blur(4px);
+}
+</style>
+
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1634561486845821');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1634561486845821&amp;ev=PageView&amp;noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- Global site tag (gtag.js) - Google Ads: 985788024 -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-985788024"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-985788024');
+
+    	gtag('config', 'UA-42718766-4');
+  
+
+</script>
+
+
+
+
+
+
+
+
+</head>
+<body >
+
+
+
+	<div id="app">
+	</div>
+	<div class="main-image  bg-white ">
+		<div class="main-mask"></div>
+	</div>
+
+	    <template id="topBar">
+        <div class="row sticky-top">
+                <nav class="navbar navbar-expand  shadow-mask-light " id="navbar-top"  style="background:rgb(0, 0, 0);color:rgb(255, 255, 255)" >
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                                                                                    </li>
+                                                        </ul>
+                            </div>
+        </nav>
+    </div>
+    </template>
+
+	<div class="main" id="login-content" v-cloak>
+
+	<top-bar></top-bar>
+
+	<div class="">
+		
+		
+		<div class="frm-header" v-if="showForm == 1">
+			<h5 class="title">Ingresa a nuestra tienda online </h5>
+		</div>
+		<div id="frm-login" class="frm-login">
+			<div class="loading-mask" v-show="loading">
+				<div class="loading-spinner">
+					<img src="img/rolling.svg" />
+					<p class="loading-text" v-html="loadingMessage"></p>
+				</div>
+			</div>
+						<div class="row">
+				<div class="col-12">
+					<div class="frm-content" v-if="showForm == 1">
+						<a class="btn-social btn-facebook btn-rb btn-rb-facebook" @click="signInFacebook" v-if="showLoginSocial">Ingresa con <strong>Facebook</strong></a>
+						<a class="btn-social btn-facebook btn-rb btn-rb-facebook" @click="signInNativeFacebook" v-else>Ingresa con <strong>Facebook</strong></a>
+						<a class="btn-social btn-google btn-rb btn-rb-google" @click="signInGoogle" v-if="showLoginSocial">Ingresa con <strong>Google</strong></a>
+						<a class="btn-social btn-social btn-google btn-rb btn-rb-google" @click="signInNativeGoogle" v-else>Ingresa con <strong>Google</strong></a>
+						<a class="btn-social btn-email btn-rb btn-rb-email" @click="showLoginWithEMail">Ingresa con <strong>Email</strong></a>
+						<p v-html="info_navigator" style="color: #FFFFFF;display: none"></p>
+					</div>
+					<div class="frm-content" v-else-if="showForm == 2">
+						<div class="form-group">
+							<label for="email" class="col-form-label">Email</label>
+							<input type="text" name="email" v-bind:class=" errors.email ? 'form-control input-error-material rbinput':'form-control rbinput'" v-model="email">
+						</div>
+						<div class="row error-message" v-show="errorMessage!=''" v-html="errorMessage">
+						</div>
+						<a class="btn-rb btn-rb-email btn-shadow-mask-m" @click="login(1)">Ingresa</a>
+					</div>
+					<div class="frm-content" v-else-if="showForm == 3">
+						<div class="form-group">
+							<label for="email" class="col-form-label">Email</label>
+							<input type="text" name="email" v-bind:class=" errors.email ? 'form-control input-error-material rbinput':'form-control rbinput'" v-model="email">
+							<label for="email" class="col-form-label">Contraseña</label>
+							<input type="password" name="password" v-bind:class="errors.password ? 'form-control input-error-material rbinput':'form-control rbinput'" v-model="password" autocomplete="new-password">
+						</div>
+						<div class="row error-message" v-show="errorMessage!=''" v-html="errorMessage">
+						</div>
+						<a class="forgot-password" @click="recoveryPassword">¿Recuperar contraseña?</a>
+						<a class="btn-rb btn-rb-email" @click="login(2)">Ingresa</a>
+					</div>
+					<div class="frm-content" v-else-if="showForm == 4">
+						<div class="form-group">
+							<label for="name" class="col-form-label">Nombre</label>
+							<input type="text" name="name" v-bind:class=" errors.name ? 'form-control input-error-material rbinput':'form-control rbinput'" v-model="name" autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="last_name" class="col-form-label">Apellidos</label>
+							<input type="text" name="last_name" v-bind:class=" errors.last_name ? 'form-control input-error-material rbinput':'form-control rbinput'" v-model="last_name" autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="email" class="col-form-label">Email</label>
+							<input type="text" name="email" v-bind:class=" errors.email ? 'form-control input-error-material rbinput':'form-control rbinput'" v-model="email">
+						</div>
+						<div class="form-group">
+							<label for="password" class="col-form-label">Contraseña</label>
+							<input type="password" name="password" v-bind:class=" errors.password ? 'form-control input-error-material rbinput':'form-control rbinput'" v-model="password" autocomplete="new-password">
+						</div>
+						<div class="form-group">
+							<label for="repeat_password" class="col-form-label">Repetir contraseña</label>
+							<input type="password" name="repeat_password" v-bind:class=" errors.repeat_password ? 'form-control input-error-material rbinput':'form-control rbinput'" v-model="repeat_password" autocomplete="new-password">
+						</div>
+						<div class="row error-message" v-show="errorMessage!=''" v-html="errorMessage">
+						</div>
+						<a class="btn-rb btn-rb-email" @click="register">Registrar</a>
+						<a class="link-go-back" @click="goBack">&laquo; Regresar</a>
+					</div>
+					<div class="frm-content" v-else-if="showForm == 5">
+						<p v-html="message" class="info-message" v-if="message != ''"></p>
+						<a class="link-go-back" @click="goBack">&laquo; Regresar</a>
+					</div>
+				</div>
+			</div>
+					</div>
+	</div>
+</div>
+
+
+	<!-- Footer -->
+		<div class="footer">
+	<table>
+	<tr>
+		<td colspan="3">
+			<a href="https://mesa247.pe/"><img src="img/logo_white.svg" style="width:50px;height:50px;"></a>
+		</td>
+	</tr>
+	<tr>
+	<td style="width:33%;text-align: center;"><a href="https://www.mesa247.pe/terminos_condiciones" target="_blank">Términos y condiciones</a></td>
+	<td style="width:34%;text-align: center;">© 2020 Powered by MESA 24/7</td>
+	<td style="width:33%;text-align: center;"><a href="https://www.mesa247.pe/politicas_privacidad" target="_blank">Políticas de privacidad</a></td>
+	</tr>
+	</table>
+	<div style="display: none">v1.2020.06.10.18.30</div>
+	</div>
+		<!-- Scripts -->
+	<script src="js/app7f4d.js?id=d6573f5341aa08aad653"></script>
+	
+			<iframe id="session-frame" style="display: none" src="https://mesa247.pe/user/token?session_key=K3c41%iEp6Y88XY5ys38dRBWGP7N^Rq$1h!*tXHt&amp;token=cb3ef43e02362fb1cbb62610933877cb"></iframe>
+	
+	<script>
+
+		$(document).ready(function() {
+			if ($('#session-frame').length > 0) {
+
+				$('#session-frame').on('load', function(){
+					console.log('load');
+					$('#session-frame').remove()
+
+											$.post("auth-global.html", { session_token: "cb3ef43e02362fb1cbb62610933877cb" })
+						.done(function( data ) {
+							if (data.success) {
+								window.location.reload();
+							}
+						});
+					
+				});
+			}
+
+			$('#logoutButton').on('click', function(e) {
+				e.preventDefault();
+				var _this = $(this)
+
+				$('body').append('<iframe id="logout-frame" style="display: none" src="https://mesa247.pe/user/logout"></iframe>');
+
+				$('#logout-frame').on('load', function(){
+					console.log('load');
+					$('#logout-frame').remove()
+
+					window.location.href = _this.attr('href')
+				});
+
+			});
+		});
+	</script>
+
+	<script type="text/javascript">
+		
+		function setCookie(cname, cvalue, exhours) {
+			var d = new Date();
+			d.setTime(d.getTime() + (exhours * 60 * 60 * 1000));
+			var expires = "expires="+d.toUTCString();
+			document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+		}
+
+		function getCookie(cname) {
+			var name = cname + "=";
+			var ca = document.cookie.split(';');
+
+			for(var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+
+				while (c.charAt(0) == ' ') {
+					c = c.substring(1);
+				}
+
+				if (c.indexOf(name) == 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+
+			return "";
+		}
+
+		function removeCookie(cname) { 
+			setCookie(cname, 0, 0); 
+		}
+  	</script>
+
+	<script src="js/vue.min.js"></script>
+
+	    <script type="text/javascript">
+        var EventBus = new Vue();
+
+        var topBar = Vue.extend({
+            template: '#topBar',
+            data() {
+                return {
+                    principal_address: {
+                        id: null,
+                        alias: '',
+                        address: '',
+                    },
+                    my_addresses: [],
+                    collection_addresses: [],
+                    credits_message: '',
+                    credits_url:'',
+                    loading: false,
+                    showRestaurantPlaceholder: false,
+                    takeout: false,
+                    preload: true,
+                    lang: "es",
+                    prefix_order_type: '',
+                }
+            },
+            props: ['cart', 'cartLoaded', 'cartTotal', 'showButtonPay', 'buttonPayLabel'],
+            created() {
+                                this.showRestaurantPlaceholder = true;
+                
+                                EventBus.$on('selectPrincipalAddressTemp', this.onSelectPrincipalAddressTemp)
+                EventBus.$on('changeOrderType', this.onChangeOrderType);
+                EventBus.$on('syncCartSummary', this.onSyncCartSummary);
+            },
+            methods: {
+                onChangeOrderType(typeId) {
+                    var self = this;
+
+                    if (typeId === '' || typeId === null) {
+                        self.prefix_order_type = '';
+                    }
+
+                    self.takeout = typeId == 1;
+                    self.preload = true;
+                },
+                onSelectPrincipalAddressTemp(addressId) {
+                    var self = this;
+
+                    if (self.collection_addresses && addressId) {
+                        let myAddresses = self.collection_addresses;
+                        let address = myAddresses.filter(obj => obj.id == addressId);
+
+                        if (typeof address !== 'undefined') {
+                            address = address[0];
+                            self.principal_address.id = address.id;
+                            self.principal_address.alias = address.alias;
+                            self.principal_address.address = address.address;
+                        }
+                    }
+                },
+                onSyncCartSummary(items) {
+                    var self = this;
+
+                    self.cart = items.cart;
+                    self.cartLoaded = items.cartLoaded;
+                    self.cartTotal = items.cartTotal;
+                },
+                onPayCart(obj) {
+                    var self = this;
+
+                    EventBus.$emit('payCart');
+                },
+                async getMyAddresses(){
+                    var self = this;
+
+                    self.loading = true;
+                    window.axios.defaults.baseURL = 'https://restaurantes.mesa247.pe/v3/';
+                    window.axios.defaults.headers.common = {'Authorization': "Bearer " + ""};
+                    window.axios.defaults.headers.common['Content-Type'] = 'application/json';
+                    window.axios.defaults.headers.common['Accept'] = 'application/json';
+
+                    const params = new URLSearchParams();
+                    params.append('language', self.lang);
+                    params.append('country_code', 'pe');
+
+                    const rs = await axios.get('users/addresses',{
+                        params: params
+                    }).then(function (response) {
+                        if (response.data && response.data.length) {
+
+                            var logout = 0;
+                            self.collection_addresses = response.data;
+                            let address = response.data.filter(obj => obj.default !== '0');
+                            const addressesColletion = response.data.map(function (element) {
+                                element.address = element.address.replace('Avenida ', '');
+                                element.address = element.address.replace('Jiron ', '');
+                                element.address = element.address.replace('Calle ', '');
+
+                                logout = element.logout;
+
+                                return element;
+                            });
+
+                            if (logout == 1)
+                                window.location.href = 'auth-global.html';
+
+
+                            if (typeof address !== 'undefined') {
+                                address = address[0];
+                                self.principal_address.id = address.id;
+                                self.principal_address.alias = address.alias;
+                                self.principal_address.address = address.address;
+                            }
+
+                            self.my_addresses = addressesColletion;
+                        }
+                    }).catch(function (error) {
+                        console.log(error);
+                        if (error.response.status == 401)
+                            window.location.href = 'auth-global.html';
+                    });
+
+                    self.loading = false;
+                    self.showRestaurantPlaceholder = true;
+                },
+
+                async activateAddress(addressId) {
+                    var self = this;
+
+                    self.loading = true;
+                    window.axios.defaults.baseURL = 'https://restaurantes.mesa247.pe/v3/';
+                    window.axios.defaults.headers.common = {'Authorization': "Bearer " + ""};
+                    window.axios.defaults.headers.common['Content-Type'] = 'application/json';
+                    window.axios.defaults.headers.common['Accept'] = 'application/json';
+
+                    self.loading = true;
+                    self.loadingMessage = "Ahora estamos actualizando tu dirección principal...";
+
+                    const rs = await axios.put(`users/addresses/${addressId}`, {
+                        language: self.lang,
+                        country_code: 'pe',
+                        default: 1,
+                    }).then(function (response) {
+                        window.location.href = 'auth-global.html';
+                    }).catch(function (error) {
+                        console.log(error);
+                        self.loading = false;
+                    });
+                },
+
+                async getInformation() {
+                    var self = this;
+
+                    self.loading = true;
+                    window.axios.defaults.baseURL = 'https://restaurantes.mesa247.pe/v3/';
+                    window.axios.defaults.headers.common = {'Authorization': "Bearer " + ""};
+                    window.axios.defaults.headers.common['Content-Type'] = 'application/json';
+                    window.axios.defaults.headers.common['Accept'] = 'application/json';
+
+                    const rs = await axios.get(`users/information`, {
+                        language: self.lang,
+                        country_code: 'pe',
+                    }).then(function (response) {
+                        self.credits_message = response.data.message;
+                        let url = response.data.url;
+                        if(url == 'credits'){
+                            self.credits_url = "https://mesa247.pe/usuario/mis-creditos";
+                        }else if(url == 'points'){
+                            self.credits_url = "https://mesa247.pe/usuario/mis-puntos";
+                        }
+                    }).catch(function (error) {
+                        console.log(error);
+                    });
+
+                    self.loading = false;
+                },
+            }
+        });
+
+        Vue.component('top-bar', topBar);
+    </script>
+
+	
+<script type="text/javascript">
+let didScroll = false;
+ 
+window.onscroll = () => didScroll = true;
+ 
+setInterval(() => {
+    if ( didScroll ) {
+        didScroll = false;
+		var y = window.pageYOffset;
+		if ( y < 194) {
+			//document.getElementById("headerdata").style.display = "block";
+			if(document.getElementById("tabbar") != null){
+				document.getElementById("tabbar").style.position = "relative";
+				document.getElementById("tabbar").style.top = "auto";
+				document.getElementById("headerdata").style.margin = "0 0 10px 0";
+				document.getElementById("headerdata").style.display = "block";
+			}
+		} else if ( y >= 194) {
+			//document.getElementById("headerdata").style.display = "none";
+			if(document.getElementById("tabbar") != null){
+				document.getElementById("tabbar").style.position = "fixed";
+				document.getElementById("tabbar").style.top = "0";
+				document.getElementById("headerdata").style.margin = "0 0 55px 0";
+			}
+		}
+    }
+}, 500);
+
+function rbHeaderHide() {
+  document.getElementById("headerdata").style.display = "none";
+}
+
+window.c2 = 0;
+window.c3 = 0;
+
+var auth = new Vue({
+	components: {
+		topBar
+	},
+	el:  '#login-content',
+	data: {
+		categories: [],
+		email:"",
+		errorMessage: "",
+		errors:{
+			name: false,
+			last_name: false,
+			password: false,
+			repeat_password: false,
+			email: false,
+		},
+		info_navigator: '',
+		loading: false,
+		loadingMessage: "",
+		local_id: "auth-global",
+		locals: [],
+		local: [],
+		localFotoPerfil: '',
+		localLogo: '',
+		repartidorFlag: 1,
+		message:'',
+		name: '',
+		password: '',
+		productQuantity:[],
+		redirect: "",
+		repeat_password: '',
+		last_name: '',
+		showItems: false,
+		soctoken: "",
+		showForm: 1,
+		showLoginSocial: false,
+		user:[],
+		displayLangList: false,
+		lang: "es",
+	},
+	mounted: function(){
+		this.detectNavigator();
+	},
+	computed: {
+	},
+	created(){
+		this.getLocals();
+		if(this.soctoken != ''){
+			this.getSocialInfo();
+		}
+		//this.loadProducts();
+	},
+	methods: {
+		changeLang(val) {
+		},
+		buildProducts(categories){
+			categories.map((elem,idx)=>{
+				let products = elem.Productos;
+				products.map((ele2,idx2)=>{
+					let groups = ele2.Grupos;
+					groups.map((ele3,idx3)=>{
+					});
+				});
+			});
+		},
+		cleanFields(){
+			var self = this;
+			self.name = '';
+			self.last_name = '';
+			self.email = '';
+			self.password = '';
+			self.repeat_password = '';
+		},
+		detectNavigator(){
+			var self = this;
+			var ua = navigator.userAgent;
+			//self.info_navigator = ua;
+			if((ua.indexOf("FB_IAB") > -1) || (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1) || (ua.indexOf("FBID") > -1) || (ua.indexOf("FBMD") > -1) || (ua.indexOf("Instagram") > -1) ){
+				self.showLoginSocial = false;
+			}else{
+				self.showLoginSocial = true;
+			}
+		},
+		getLocalInfo(){
+			var self  = this;
+			let locals = self.locals;
+			locals.map((elem,idx)=>{
+				if(self.local_id  == elem.Id){
+					self.local = elem;
+					self.repartidorFlag = self.local.RepartidorFlag != null ? parseInt(self.local.RepartidorFlag) : 0;
+				}
+			});
+		},
+		getProductImage(image){
+			let url = '';
+			url = image != null  && image != '' ? 'background-image: url('+image+');': '';
+			if ( image == 'https://restaurantes.mesa247.pe//archivos/trans.png'  || image == '' || image =='https://restaurantes.mesa247.pe//') {
+				return '';
+			} else {
+				return url;
+			}
+		},
+		goBack(){
+			var self = this;
+			self.message = '';
+			self.showForm = 1;
+		},
+		goToNewTop(){
+			var self = this;
+			if(self.redirect == ''){
+				self.showItems = false;
+				document.body.scrollTop = 0;
+	  			document.documentElement.scrollTop = 0;
+			}else{
+				location.href = self.redirect;
+			}
+		},
+		showLoginWithEMail(){
+			var self = this;
+			self.cleanFields();
+			self.showForm = 2;
+		},
+		validationForm(type){
+			if(type == 1){
+				this.errors.email = (this.email == "") ? true : false;
+				return ( this.errors.email ) ? false : true;
+			}else if(type == 2){
+				this.errors.email = (this.email == "") ? true : false;
+				this.errors.password = (this.password == "") ? true : false;
+				return ( this.errors.email || this.errors.password ) ? false : true;
+			}else{
+				this.errors.email = (this.email == "") ? true : false;
+				this.errors.name = (this.name == "") ? true : false;
+				this.errors.last_name = (this.last_name == "") ? true : false;
+				this.errors.password = (this.password == "" ||  this.password != this.repeat_password ) ? true : false;
+				this.errors.repeat_password = (this.repeat_password == "" ||  this.password != this.repeat_password) ? true : false;
+				return ( this.errors.email  || this.errors.name  || this.errors.last_name  || this.errors.password  || this.errors.repeat_password ) ? false : true;
+			}
+		},
+		async recoveryPassword(){
+			var self = this;
+			self.loading = true;
+			if(self.email != ''){
+				self.loadingMessage = "Se está enviando un email para que puedas recuperar tu contraseña";
+				window.axios.defaults.baseURL = "https://restaurantes.mesa247.pe/v1/";
+				window.axios.defaults.params = {};
+				window.axios.defaults.headers.common = {'Authorization': "Bearer " + "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImU3ZWU2MWQxMWYxOTYxMjFjOTRmZGYxYzgyNDIzNTAyMTE3NWNhMmY2YTM1ZDEwNDBiZTQ4MDQxYmY3YjNhYjU3YTFhYzE3MGVhMDhlZDEyIn0.eyJhdWQiOiIyMCIsImp0aSI6ImU3ZWU2MWQxMWYxOTYxMjFjOTRmZGYxYzgyNDIzNTAyMTE3NWNhMmY2YTM1ZDEwNDBiZTQ4MDQxYmY3YjNhYjU3YTFhYzE3MGVhMDhlZDEyIiwiaWF0IjoxNjU2NjIwMjUyLCJuYmYiOjE2NTY2MjAyNTIsImV4cCI6MTY4ODE1NjI1MSwic3ViIjoiNDg0OTYiLCJzY29wZXMiOltdfQ.XN-sC8utU5jLUHXXF7eY1qkWn3M2trhrXZlCXMLH84iTVUBo2tp_ZQyDvgsVIWTdtuE2Rjs9RaVp3A54BxWTpaGZcXAaQvJ-5KK3_GEbs9IVLE3TQRV8mqErzvqSwS2p-j8uvRde_IZ62Tmqe7QwwjjfIeufos6bSH3b7vhJrhNkTzdV3wvLbhQWbL9sZkGcfRVWlcjGp6VhcwTMNIRmWmuF3BkaUTtJKu5QYGWSgNIofpNq_fpOOrG1pUdMvDjjj2Ip61aVzEZPH5RdjXvAaNAL-1Tp6g1xk9II2y0QKuQYDhGuCr_23509LPyzecMsyENH8q28siQ3Is0G4B2SGlOdJei6_1c1NAW-iZv9oZSVP1vrux_7V1WDokvGGiUnaSAoBBZiknWH6qlO4K12gvpX4qevoT6QZhS8yDr7tQ-4Q8kHFA0iSqXKHGJEODZHCfMLs2N3FiG8NQusLRYA5smg64-Vkuvs5ewICpfbL3OSW9yz1r_GQX7UaVua3bCtDaU64ZBdZ3qZ5XT0pq1q6M_OHfyE7MpXDryUU9e_Bj2l6eZfGyDLKO2P5eEMQp1apP6McrKLj3CooOJpXlachCrhxSiohICloWCh3G3AeUEjyVQNo0F5wjXB4Xzo_HPV4RwLNxxBU9UUp1yY7JvI-KXsd3XpCcPfoQQpNhD188s"};
+				window.axios.defaults.headers.common['Content-Type'] = 'application/json';
+				window.axios.defaults.headers.common['Accept'] = 'application/json';
+				var rs = await axios.post('send-email-recovery-password',{
+					email: self.email
+				}).then(function (response) {
+					self.message = "Se está enviando un email para que puedas recuperar tu contraseña";
+					self.loading = false;
+				}).catch(function (error) {
+					console.log(error);
+				});
+				self.message = "Se está enviando un email para que puedas recuperar tu contraseña";
+				self.showForm = 5;
+			}
+			self.loading = false;
+		},
+		async getLocals(){
+
+			return false;
+			
+			var self = this;
+			self.loading = true;
+			window.axios.defaults.baseURL = "https://restaurantes.mesa247.pe/v1/";
+			window.axios.defaults.params = {};
+			window.axios.defaults.headers.common = {'Authorization': "Bearer " + "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImU3ZWU2MWQxMWYxOTYxMjFjOTRmZGYxYzgyNDIzNTAyMTE3NWNhMmY2YTM1ZDEwNDBiZTQ4MDQxYmY3YjNhYjU3YTFhYzE3MGVhMDhlZDEyIn0.eyJhdWQiOiIyMCIsImp0aSI6ImU3ZWU2MWQxMWYxOTYxMjFjOTRmZGYxYzgyNDIzNTAyMTE3NWNhMmY2YTM1ZDEwNDBiZTQ4MDQxYmY3YjNhYjU3YTFhYzE3MGVhMDhlZDEyIiwiaWF0IjoxNjU2NjIwMjUyLCJuYmYiOjE2NTY2MjAyNTIsImV4cCI6MTY4ODE1NjI1MSwic3ViIjoiNDg0OTYiLCJzY29wZXMiOltdfQ.XN-sC8utU5jLUHXXF7eY1qkWn3M2trhrXZlCXMLH84iTVUBo2tp_ZQyDvgsVIWTdtuE2Rjs9RaVp3A54BxWTpaGZcXAaQvJ-5KK3_GEbs9IVLE3TQRV8mqErzvqSwS2p-j8uvRde_IZ62Tmqe7QwwjjfIeufos6bSH3b7vhJrhNkTzdV3wvLbhQWbL9sZkGcfRVWlcjGp6VhcwTMNIRmWmuF3BkaUTtJKu5QYGWSgNIofpNq_fpOOrG1pUdMvDjjj2Ip61aVzEZPH5RdjXvAaNAL-1Tp6g1xk9II2y0QKuQYDhGuCr_23509LPyzecMsyENH8q28siQ3Is0G4B2SGlOdJei6_1c1NAW-iZv9oZSVP1vrux_7V1WDokvGGiUnaSAoBBZiknWH6qlO4K12gvpX4qevoT6QZhS8yDr7tQ-4Q8kHFA0iSqXKHGJEODZHCfMLs2N3FiG8NQusLRYA5smg64-Vkuvs5ewICpfbL3OSW9yz1r_GQX7UaVua3bCtDaU64ZBdZ3qZ5XT0pq1q6M_OHfyE7MpXDryUU9e_Bj2l6eZfGyDLKO2P5eEMQp1apP6McrKLj3CooOJpXlachCrhxSiohICloWCh3G3AeUEjyVQNo0F5wjXB4Xzo_HPV4RwLNxxBU9UUp1yY7JvI-KXsd3XpCcPfoQQpNhD188s"};
+			window.axios.defaults.headers.common['Content-Type'] = 'application/json';
+			window.axios.defaults.headers.common['Accept'] = 'application/json';
+			var rs = await axios.get('ecommerce/locals?local_id=auth-global').then(function (response) {
+				self.locals = response.data.data.locals;
+				self.getLocalInfo();
+				self.loading = false;
+			}).catch(function (error) {
+				console.log(error);
+			});
+			self.loading = false;
+		},
+		async validEmail(){
+			var self = this;
+			self.loading = true;
+			window.axios.defaults.baseURL = "https://restaurantes.mesa247.pe/v1/";
+			window.axios.defaults.params = {};
+			window.axios.defaults.headers.common['Content-Type'] = 'application/json';
+			window.axios.defaults.headers.common['Accept'] = 'application/json';
+			var rs = await axios.post("ext-auth-email",{ 
+				email: self.email
+			}).then(function (response) {
+				if(response.data.success){
+					self.loadingMessage = response.data.message;
+					self.loginSocial();
+					self.loading = false;
+				}else{
+					self.showForm = 4;
+					self.loading = false;
+				}
+			}).catch(function (error) {
+				self.loginSocial();
+				self.loading = false;
+			});
+		},
+		async loginSocial(){
+			var self = this;
+			self.loading = true;
+			let validation = self.validationForm(1);
+			if(validation){
+				self.loading = true;
+				window.axios.defaults.baseURL = "https://restaurantes.mesa247.pe/v1/";
+				window.axios.defaults.params = {};
+				window.axios.defaults.headers.common = {};
+				window.axios.defaults.headers.common['Content-Type'] = 'application/json';
+				window.axios.defaults.headers.common['Accept'] = 'application/json';
+				var rs = await axios.post("login-social.html",{ 
+						email: self.email, 
+						social: 1
+					}).then(function (response) {
+						if(response.data.success){
+							self.loadingMessage = response.data.message;
+
+							$('body').append('<iframe id="login-frame" style="display: none" src="https://mesa247.pe/user/token?session_key=K3c41%iEp6Y88XY5ys38dRBWGP7N^Rq$1h!*tXHt&amp;token=cb3ef43e02362fb1cbb62610933877cb"></iframe>');
+
+							$('#login-frame').on('load', function(){
+								console.log('load');
+								$('#login-frame').remove()
+
+								if(self.repartidorFlag != 0 ){
+									location.href = 'auth-global.html';
+								}else{
+									location.href = 'auth-global.html';
+								}
+							});
+							
+						}else{
+							self.errorMessage = response.data.message;
+							self.showForm = 4;
+							self.loading = false;
+						}
+					}).catch(function (error) {
+						self.loadingMessage = error.data.message;
+						self.errorMessage = error.data.message;
+						self.showForm = 4;
+						self.loading = false;
+					});
+			}else{
+				self.loading = false;
+			}
+		},
+		async login(type){
+			var self = this;
+			let validation = self.validationForm(type);
+			if(validation){
+				self.loading = true;
+				if(type == 1){
+					window.axios.defaults.baseURL = "https://restaurantes.mesa247.pe/v1/";
+					window.axios.defaults.params = {};
+					window.axios.defaults.headers.common['Content-Type'] = 'application/json';
+					window.axios.defaults.headers.common['Accept'] = 'application/json';
+					var rs = await axios.post("ext-auth-email",{ 
+							email: self.email
+						}).then(function (response) {
+							if(response.data.success){
+								self.loadingMessage = response.data.message;
+								//self.errorMessage = response.data.message;
+								self.showForm = 3;
+							}else{
+								self.showForm = 4;
+							}
+							self.loading = false;
+						}).catch(function (error) {
+							self.loadingMessage = error.response.data.message;
+							//self.errorMessage = error.response.data.message;
+							self.showForm = 4;
+							self.loading = false;
+						});
+				}else{
+					window.axios.defaults.baseURL = "index.html";
+					window.axios.defaults.params = {};
+					window.axios.defaults.headers.common['Content-Type'] = 'application/json';
+					window.axios.defaults.headers.common['Accept'] = 'application/json';
+					var rs = await axios.post("login.html",{ 
+							email: self.email, 
+							password: self.password
+						}).then(function (response) {
+							if(response.data.success){
+								self.loadingMessage = response.data.message;
+
+								$('body').append('<iframe id="login-frame" style="display: none" src="https://mesa247.pe/user/token?session_key=K3c41%iEp6Y88XY5ys38dRBWGP7N^Rq$1h!*tXHt&amp;token=cb3ef43e02362fb1cbb62610933877cb"></iframe>');
+
+								$('#login-frame').on('load', function(){
+									console.log('load');
+									$('#login-frame').remove()
+
+									if(self.repartidorFlag != 0 ){
+										location.href = 'auth-global.html';
+									}else{
+										location.href = 'auth-global.html';
+									}
+								});
+
+								
+							}else{
+								self.errorMessage = response.data.message;
+								self.showForm = 3;
+								self.loading = false;
+							}
+						}).catch(function (error) {
+							self.loadingMessage = error.response.data.message;
+							self.errorMessage = error.response.data.message;
+							self.loading = false;
+						});
+				}
+			}else{
+				self.loading = false;
+			}
+		},
+		async register(){
+			var self = this;
+			let validation = self.validationForm(3);
+			if(validation){
+				self.loading = true;
+				window.axios.defaults.baseURL = "index.html";
+				window.axios.defaults.params = {};
+				window.axios.defaults.headers.common['Content-Type'] = 'application/json';
+				window.axios.defaults.headers.common['Accept'] = 'application/json';
+				var rs = await axios.post("registro.html",{ 
+						email: self.email, 
+						name: self.name,
+						last_name: self.last_name,
+						password: self.password, 
+						repeat_password: self.repeat_password
+					}).then(function (response) {
+						if(response.data.success){
+							self.loadingMessage = response.data.message;
+
+							
+
+							$('body').append('<iframe id="login-frame" style="display: none" src="https://mesa247.pe/user/token?session_key=K3c41%iEp6Y88XY5ys38dRBWGP7N^Rq$1h!*tXHt&amp;token=cb3ef43e02362fb1cbb62610933877cb"></iframe>');
+
+							$('#login-frame').on('load', function(){
+								console.log('load');
+								$('#login-frame').remove()
+
+								if(self.repartidorFlag != 0 ){
+									location.href = 'auth-global.html';
+								}else{
+									location.href = 'auth-global.html';
+								}
+							});
+
+						}else{
+							self.errorMessage = response.data.message;
+							self.loading = false;
+						}
+					}).catch(function (error) {
+						self.loadingMessage = error.response.data.message;
+						self.errorMessage = error.response.data.message;
+						self.loading = false;
+					});
+			}else{
+				self.loading = false;
+			}
+		},
+		signInNativeFacebook(){
+			var self = this;
+			self.cleanFields();
+			self.loading = true;
+			self.loadingMessage = "Validando el inicio de sesión usando redes sociales";
+			let tokenSocial = (new Date().valueOf() * 1000 ) + Math.floor(Math.random() * 9999) + 1000;
+			var channel = 'facebook';
+			var api_social = "https://apisocial.mesa247.pe/";
+			var url= api_social+'facebook/login';
+			var origin = 'web_fb';
+			var urlSocial = url+'?token='+tokenSocial+"&origin="+origin+"&redirect=https://blackburger.pe/pideonline/auth-global/login-oauth";
+			location.href = urlSocial;
+		},
+		signInNativeGoogle(){
+			var self = this;
+			self.cleanFields();
+			self.loading = true;
+			self.loadingMessage = "Validando el inicio de sesión usando redes sociales";
+			let tokenSocial = (new Date().valueOf() * 1000 ) + Math.floor(Math.random() * 9999) + 1000;
+			var channel = 'google';
+			var api_social = "https://apisocial.mesa247.pe/";
+			var url= api_social+'google/login';
+			var origin = 'web_fb';
+			var urlSocial = url+'?token='+tokenSocial+"&origin="+origin+"&redirect=https://blackburger.pe/pideonline/auth-global/login-oauth";
+			location.href = urlSocial;
+		},
+		async getSocialInfo(){
+			var self = this;
+			self.loading = true;
+			window.axios.defaults.baseURL = "https://apisocial.mesa247.pe/";
+			window.axios.defaults.params = {};
+			window.axios.defaults.headers.common['Content-Type'] = 'application/json';
+			window.axios.defaults.headers.common['Accept'] = 'application/json';
+			var rs = await axios.get("facebook/info?soctoken="+self.soctoken).then(function (response) {
+					self.name = response.data.Nombre;
+					self.last_name = response.data.Apellido;
+					self.email = response.data.Email;
+					if(self.email!=null){
+						self.validEmail();
+					}else{
+						self.showForm = 4;
+						self.loading = false;
+					}
+				}).catch(function (error) {
+					console.log(error);
+					self.loading = false;
+				});
+		},
+		async loadProducts(){
+			var self = this;
+			self.loading = true;
+			self.loadingMessage = "Procesando la información proporcionada";
+			window.axios.defaults.baseURL = "https://restaurantes.mesa247.pe/v1/";
+        	window.axios.defaults.params = {};
+			window.axios.defaults.headers.common = {'Authorization': "Bearer " + "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImU3ZWU2MWQxMWYxOTYxMjFjOTRmZGYxYzgyNDIzNTAyMTE3NWNhMmY2YTM1ZDEwNDBiZTQ4MDQxYmY3YjNhYjU3YTFhYzE3MGVhMDhlZDEyIn0.eyJhdWQiOiIyMCIsImp0aSI6ImU3ZWU2MWQxMWYxOTYxMjFjOTRmZGYxYzgyNDIzNTAyMTE3NWNhMmY2YTM1ZDEwNDBiZTQ4MDQxYmY3YjNhYjU3YTFhYzE3MGVhMDhlZDEyIiwiaWF0IjoxNjU2NjIwMjUyLCJuYmYiOjE2NTY2MjAyNTIsImV4cCI6MTY4ODE1NjI1MSwic3ViIjoiNDg0OTYiLCJzY29wZXMiOltdfQ.XN-sC8utU5jLUHXXF7eY1qkWn3M2trhrXZlCXMLH84iTVUBo2tp_ZQyDvgsVIWTdtuE2Rjs9RaVp3A54BxWTpaGZcXAaQvJ-5KK3_GEbs9IVLE3TQRV8mqErzvqSwS2p-j8uvRde_IZ62Tmqe7QwwjjfIeufos6bSH3b7vhJrhNkTzdV3wvLbhQWbL9sZkGcfRVWlcjGp6VhcwTMNIRmWmuF3BkaUTtJKu5QYGWSgNIofpNq_fpOOrG1pUdMvDjjj2Ip61aVzEZPH5RdjXvAaNAL-1Tp6g1xk9II2y0QKuQYDhGuCr_23509LPyzecMsyENH8q28siQ3Is0G4B2SGlOdJei6_1c1NAW-iZv9oZSVP1vrux_7V1WDokvGGiUnaSAoBBZiknWH6qlO4K12gvpX4qevoT6QZhS8yDr7tQ-4Q8kHFA0iSqXKHGJEODZHCfMLs2N3FiG8NQusLRYA5smg64-Vkuvs5ewICpfbL3OSW9yz1r_GQX7UaVua3bCtDaU64ZBdZ3qZ5XT0pq1q6M_OHfyE7MpXDryUU9e_Bj2l6eZfGyDLKO2P5eEMQp1apP6McrKLj3CooOJpXlachCrhxSiohICloWCh3G3AeUEjyVQNo0F5wjXB4Xzo_HPV4RwLNxxBU9UUp1yY7JvI-KXsd3XpCcPfoQQpNhD188s"};
+			window.axios.defaults.headers.common['Content-Type'] = 'application/json';
+			window.axios.defaults.headers.common['Accept'] = 'application/json';
+			var rs = await axios.get('ecommerce/locals/' + self.local_id + '/products', {
+			}).then(function (response) {
+				self.categories = response.data.data.categories;
+				self.buildProducts(self.categories);
+				self.loading = false;
+			}).catch(function (error) {
+				console.log(error);
+			});
+			self.loading = false;
+		},
+		async signInFacebook(){
+			var self = this;
+			self.cleanFields();
+			self.loading = true;
+			self.loadingMessage = "Validando el inicio de sesión usando redes sociales";
+			let tokenSocial = (new Date().valueOf() * 1000 ) + Math.floor(Math.random() * 9999) + 1000;
+			var channel = 'facebook';
+			var api_social = "https://apisocial.mesa247.pe/";
+			var url= api_social+'facebook/login';
+			var title = "Api Social";
+			var w = 580;var h = 400;
+			var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : window.screenX;
+			var dualScreenTop = window.screenTop != undefined ? window.screenTop : window.screenY;
+			var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+			var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+			var left = ((width / 2) - (w / 2)) + dualScreenLeft;
+			var top = ((height / 2) - (h / 2)) + dualScreenTop;
+			var origin = 'new-web';
+			var mdlSocial = window.open(url+'?token='+tokenSocial+"&origin="+origin, 'apisocial', 'width=' + w + ', height=' + h + ', top=' + top + ', left=' + left+',toolbar=0,scrollbars=0resizable=0,location=1,menuBar=0');
+			var interval = setInterval(() => {
+				if(mdlSocial.closed) {
+					clearInterval(interval);
+					window.axios.defaults.baseURL = "https://apisocial.mesa247.pe/";
+					window.axios.defaults.params = {};
+					window.axios.defaults.headers.common['Content-Type'] = 'application/json';
+					window.axios.defaults.headers.common['Accept'] = 'application/json';
+					var rs = axios.get('facebook/info?soctoken='+tokenSocial).then(function(response) {
+						self.name = response.data.Nombre;
+						self.last_name = response.data.Apellido;
+						self.email = response.data.Email;
+						if(self.email!=null){
+							self.validEmail();
+						}else{
+							self.showForm = 4;
+							self.errorMessage = "Facebook no nos ha brindado tu email";
+							self.loading = false;
+						}
+					}).catch(function (error) {
+						console.log(error);
+						self.loading = false;
+					});
+				}
+			}, 2000);
+		},
+		async signInGoogle(){
+			var self = this;
+			self.cleanFields();
+			self.loading = true;
+			self.loadingMessage = "Validando el inicio de sesión usando redes sociales";
+			let tokenSocial = ( new Date().valueOf() ) * 1000;
+			tokenSocial += Math.floor(Math.random() * 9999) + 1000;
+			var channel = 'google';
+			var api_social ="https://apisocial.mesa247.pe/";
+			var url= api_social+'google/login';
+			var title = "Api Social";
+			var w = 580;var h = 400;
+			var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : window.screenX;
+			var dualScreenTop = window.screenTop != undefined ? window.screenTop : window.screenY;
+			var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+			var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+			var left = ((width / 2) - (w / 2)) + dualScreenLeft;
+			var top = ((height / 2) - (h / 2)) + dualScreenTop;
+			var origin = 'new-web';
+			var mdlSocial = window.open(url+'?token='+tokenSocial+"&origin="+origin, 'apisocial', 'width=' + w + ', height=' + h + ', top=' + top + ', left=' + left+',toolbar=0,scrollbars=0resizable=0,location=1,menuBar=0');
+			var interval = setInterval(() => {
+				if(mdlSocial.closed) {
+					clearInterval(interval);
+					window.axios.defaults.baseURL = "https://apisocial.mesa247.pe/";
+					window.axios.defaults.params = {};
+					window.axios.defaults.headers.common['Content-Type'] = 'application/json';
+					window.axios.defaults.headers.common['Accept'] = 'application/json';
+					var rs = axios.get('google/info?soctoken='+tokenSocial).then(function(response) {
+						self.name = response.data.Nombre;
+						self.last_name = response.data.Apellido;
+						self.email = response.data.Email;
+						if(self.email!=null){
+							self.validEmail();
+						}else{
+							self.showForm = 4;
+							self.loading = false;
+						}
+					}).catch(function (error) {
+						console.log(error);
+						self.loading = false;
+					});
+				}
+			}, 2000);
+		},
+		rbcountc2()	{
+			if (window.c2 == 2) { window.c2 = 0;}
+			window.c2 = window.c2 + 1;
+			return window.c2;
+		},
+		rbcountc3()	{
+
+			if (window.c3 == 3) { window.c3 = 0;}
+			window.c3 = window.c3 + 1;
+			return window.c3;
+		},
+		rbcountreset()	{
+			window.c2 = 0;
+			window.c3 = 0;
+
+			return '';
+		}
+	}
+});
+</script>
+
+</body>
+
+<!-- Mirrored from blackburger.pe/pideonline/auth-global by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Jun 2022 20:17:52 GMT -->
+</html>
