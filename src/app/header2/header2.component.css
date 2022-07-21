@@ -1,6 +1,6 @@
 .subnavigation--horizontal {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(5, auto);
   z-index: 10;
 
 }
@@ -13,8 +13,8 @@
 
 .subnavigation--horizontal {
   font-family: "SourceSansPro-Black" !important;
-  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 30%);
-  background-color: #fff;
+  box-shadow: 0 1px 1px 0 #44530E;
+  background-color: #44530e98;
   list-style-type: none;
   overflow-x: auto;
 
@@ -107,7 +107,7 @@ p {
 
 #names {
   text-decoration: none;
-  color: #da2308;
+  color: #ffffff;
 
 }
 

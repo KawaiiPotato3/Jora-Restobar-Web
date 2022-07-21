@@ -1,8 +1,7 @@
 
 *{
-    background-color:white;
-    font-family: 'Franklin Gothic Medium';
-    
+    background-color:rgb(255, 255, 255);
+    font-family: 'Cinzel';
 }
 
 .navbar-expand-lg{
@@ -13,7 +12,7 @@
     padding-top: 0px;
 }
 .btn-success {
-    color: #fff;
+    color: rgb(255, 0, 0);
     background-color: #198754;
     border-color: #198754;
     border: none;
@@ -50,5 +49,5 @@ ul{
     border-radius: 1.3vw;
 }
 svg{
-    color: #e63946;
+    color: #ffffff;
 }
