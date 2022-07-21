@@ -10,3 +10,16 @@ img{
     height: 50%;
     object-fit: cover;
 }
+
+.card-body.d-flex.flex-column{
+    background-color: #515050;
+    color: white;
+}
+.btn.btn-success.cart-button.px-3{
+    background-color: #4B5F1E;
+    border-color: #4B5F1E;
+}
+
+body{
+    background-color: #605B2A;
+}

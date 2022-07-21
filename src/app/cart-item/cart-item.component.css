@@ -17,11 +17,16 @@
     width: 45%;
     margin-right: 20%;
     margin-left: 20%;
-    color: rgb(119, 119, 131);
+    color: #777783;
 }
 
 .card-body{
     text-align: center;
+    color: white;
+}
+.card.mb-0{
+    background-color: #383737;
+    color: white;
 }
 #imagen{
     width: 90px;

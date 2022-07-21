@@ -13,9 +13,9 @@ import { DOCUMENT } from '@angular/common';
 
 export class ItemListComponent implements OnInit{
   banners= [
-    "../../assets/Recurso 1.png",
-    "../../assets/Las picositas.jpg",
-    "../../assets/La seguna vuelta.jpg"
+    "../../assets/banners/JoraBanner1.png",
+    "../../assets/banners/JoraBanner3.png",
+    "../../assets/banners/JoraBanner2.png"
   ]
   fixed:string = 'fixed';
   items: Item[] = [];
