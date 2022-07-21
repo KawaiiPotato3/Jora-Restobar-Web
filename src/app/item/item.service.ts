@@ -6,8 +6,8 @@ import { Item } from '../models/item';
 })
 export class ItemService {
   items: Item[]=[
-    new Item(0,"Pizza Hawaiana Light","Disfruta del sabor de una pizza paradisíaca hecha a mano, con Salsa de Tomate natural, 100% Queso Mozzarella, Jamón y jugosos trozos de Piña. Simplemente espectacular!",
-    [37.5,45.5],["Grande","Familiar"],"https://nuestrasrecetas.es/wp-content/uploads/2015/05/hawaiana.jpg"),
+    new Item(0,"Chorizo Ayacuchano","Saborea y disfruta de un platillo lleno de historia y sabor, es un preparado de carne molida de cerdo acompañado con Papas andinas",
+    [37.5,45.5],["Grande","Familiar"],".../.../assets/J"),
     
     new Item(1,"Pizza Americana","Si amas el Queso y el Jamón no puedes dejar de probar esta Pizza, una exquisita combinación de nuestro delicioso Queso Mozzarella y el mejor Jamón seleccionado.",
     [15.90,33.50,41.50],["Mediana","Grande","Familiar"],"https://www.periodistadigital.com/wp-content/uploads/2020/02/pizza-americana.jpg"),
