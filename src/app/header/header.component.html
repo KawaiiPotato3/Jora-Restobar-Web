@@ -1,22 +1,22 @@
-<header style="background-color:white;">
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid">
+<header style="background-color:black;">
+  <nav class="navbar navbar-expand-lg" style="background-color:black;">
+    <div class="container-fluid" style="background-color:black;">
       <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
         aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars"></i>
       </button>
-      <div>
+      <div style="background-color:black;">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li id="li-menu" class="nav-item active">
-            <a class="nav-link" data-bs-toggle="modal" routerLink="/" role="button">Menú</a>
+            <a class="nav-link" data-bs-toggle="modal" routerLink="/" role="button" style="color: #ffffff">Menú </a>
           </li>
           <li class="nav-item">
-            <a *ngIf="!logged" class="nav-link" data-bs-toggle="modal" href="#loginCliente" role="button">Mi cuenta</a>
+            <a *ngIf="!logged" class="nav-link" data-bs-toggle="modal" href="#loginCliente" role="button" style="color: #ffffff">Mi cuenta</a>
             <a *ngIf="logged" class="nav-link" data-bs-toggle="modal" routerLink="/account" role="button">Mi cuenta</a>
           </li>
           <li id="li-registrate" class="nav-item">
-            <a *ngIf="!logged" class="nav-link" data-bs-toggle="modal" href="#loginCliente" role="button">Login</a>
-            <a *ngIf="logged" class="nav-link" data-bs-toggle="modal" role="button" (click)="logOut()">Cerrar Sesión</a>
+            <a *ngIf="!logged" class="nav-link" data-bs-toggle="modal" href="#loginCliente" role="button"  style="color: #ffffff">Login</a>
+            <a *ngIf="logged" class="nav-link" data-bs-toggle="modal" role="button" (click)="logOut()" style="color: #ffffff">Cerrar Sesión</a>
           </li>
           <li class="nav-item">
             <a *ngIf="logged" class="nav-link">{{usuarioLogeado.nombres}} {{usuarioLogeado.apellidos}}</a>

@@ -1,7 +1,8 @@
 
 *{
-    background-color:rgb(255, 255, 255);
+    background-color:black;
     font-family: 'Cinzel';
+    color: #1d839c;
 }
 
 .navbar-expand-lg{
@@ -10,7 +11,7 @@
 .nav-var .navbar-expand-lg .container-fluid .container-header .content-header{
     margin-top: 0px;
     padding-top: 0px;
-    }
+}
 .btn-success {
     color: rgb(255, 0, 0);
     background-color: #198754;
@@ -51,4 +52,8 @@ ul{
 }
 svg{
     color: #ffffff;
+}
+
+.container-fluid.header{
+    color: blue;
 }

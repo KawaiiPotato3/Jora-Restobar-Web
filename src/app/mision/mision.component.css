@@ -4,6 +4,7 @@
 }
 h1{
     font-family: "Rockwell";
+    color: white;
 }
 h2{
     font-family: "Rockwell";
@@ -12,8 +13,6 @@ h2{
 .titulo{
     text-align: center;
     margin-bottom: 80px;
-
-
 }
 
 .mision{
@@ -65,6 +64,7 @@ img{
     grid-template-columns: repeat(2,2fr);
     gap: 1em;
     grid-template-rows: nimax(20px,auto);
+    color: white;
 }
 
 .interno{

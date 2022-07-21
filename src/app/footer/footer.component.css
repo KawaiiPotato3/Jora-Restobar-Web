@@ -126,3 +126,8 @@ a{
 .email{
     color: #fff;
 }
+
+.footer-logo{
+    height: 300px;
+    width: 300px;
+}

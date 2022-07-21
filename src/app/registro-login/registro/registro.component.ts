@@ -143,7 +143,7 @@ export class RegistroComponent implements OnInit {
   }
 
   private registroCompletado() {
-    Swal.fire('Ya tienes cuenta!☜(ﾟヮﾟ☜)', '🤡Buen trabajo!🤡', 'success');
+    Swal.fire('Ya tienes una cuenta!', 'Buen trabajo!', 'success');
   }
 
   registroErrado() {
@@ -163,22 +163,22 @@ export class RegistroComponent implements OnInit {
   //Regsitrado? por si acaso
   private correoYaRegsitrado() {
     Swal.fire(
-      'Tu correo ya ha sido registrado anteriormente!!! つ ◕_◕ ༽つ',
-      '¿Ingresaste bien tu cuenta de correo?\n 🤡Intenta nuevamente🤡',
+      'Tu correo ya ha sido registrado anteriormente!',
+      '¿Ingresaste bien tu cuenta de correo?\n Intenta nuevamente',
       'warning'
     );
   }
   private telefonoYaRegistrado() {
     Swal.fire(
-      'Tu número de telefono ya ha sido registrado anteriormente!!! つ ◕_◕ ༽つ',
-      '¿Ingresaste bien tu número de telefono?\n 🤡Intenta nuevamente🤡',
+      'Tu número de telefono ya ha sido registrado anteriormente!',
+      '¿Ingresaste bien tu número de telefono?\n Intenta nuevamente',
       'warning'
     );
   }
   private nroDniYaRegistrado() {
     Swal.fire(
-      'Tu número de DNI ya ha sido registrado anteriormente!!! つ ◕_◕ ༽つ',
-      '¿Ingresaste bien tu número de DNI?\n 🤡Intenta nuevamente🤡',
+      'Tu número de DNI ya ha sido registrado anteriormente!',
+      '¿Ingresaste bien tu número de DNI?\n Intenta nuevamente',
       'warning'
     );
   }

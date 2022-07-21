@@ -92,8 +92,8 @@ export class LoginComponent {
   //mensajes modales :3
   private loginUserCorrecto() {
     Swal.fire(
-      '	(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧\nBienvenido ' + this.usuarioLogeado.nombres,
-      '🤡Disfruta de tu experiencia🤡',
+      '\nBienvenido ' + this.usuarioLogeado.nombres,
+      'Disfruta de la real experience',
       'success'
     ).then(()=>{
       this.logged=true;
@@ -110,8 +110,8 @@ export class LoginComponent {
   }
   private loginAdminCorrecto() {
     Swal.fire(
-      '(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ \nBienvenido ' + this.administradorLogeado.nombres,
-      '🤡Disfruta de tu experiencia🤡',
+      '\nBienvenido ' + this.administradorLogeado.nombres,
+      'Disfruta de la real experience',
       'success'
     ).then(()=>{
       this.loggedAdmin=true;
@@ -126,15 +126,15 @@ export class LoginComponent {
   }
   private logContraseñaIncorreta() {
     Swal.fire(
-      '	(っ˘̩╭╮˘̩)っ \nContraseña incorrecta',
-      '🤡Ingrese nuevamente🤡',
-      'warning'
+      '	\nContraseña incorrecta',
+      'Ingrese nuevamente',
+      'error'
     );
   }
   private loginError() {
     Swal.fire(
-      '(＃￣ω￣)\n Login errado',
-      '🤡Verifique bien sus datos🤡 ',
+      '\n Login errado',
+      'Verifique sus datos ingresados',
       'error'
     );
   }

@@ -100,3 +100,21 @@ p {
 .bi-box-arrow-in-right {
   padding-bottom: 3px;
 }
+
+.modal-header{
+  background-color: #46450D ;
+  color: white;
+}
+.modal-footer{
+  background-color: #46450D;
+  color: white;
+}
+.modal-body{
+  background-color: #605B2A;
+  color: white;
+}
+
+#botonLogin.btn.btn-success{
+  background-color: #4B5F1E;
+}
+

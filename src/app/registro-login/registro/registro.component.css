@@ -84,3 +84,24 @@ span {
 .bi-person-check {
   padding-bottom: 5.5px;
 }
+
+.modal-header{
+  background-color: #46450D ;
+  color: white;
+}
+.modal-footer{
+  background-color: #46450D;
+  color: white;
+}
+.modal-body{
+  background-color: #605B2A;
+  color: white;
+}
+
+#botonRegistro.btn.btn-success{
+  background-color: #4B5F1E;
+}
+
+.btn.btn-success{
+  background-color: #4B5F1E;
+}
