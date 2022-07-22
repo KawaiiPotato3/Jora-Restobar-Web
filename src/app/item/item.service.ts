@@ -7,22 +7,22 @@ import { Item } from '../models/item';
 export class ItemService {
   items: Item[]=[
     new Item(0,"Chorizo Ayacuchano","Saborea y disfruta de un platillo lleno de historia y sabor, es un preparado de carne molida de cerdo acompañado con Papas andinas.",
-    [37.5],["Grande"],"../../assets/JoraChorizo1.png"),
+    [30.0],["Personal"],"../../assets/JoraChorizo1.png"),
     
     new Item(1,"Costilla BBQ","Costillas en salsa BBQ acompa;adas conpapas nativas y ensalada de la casa.",
-    [15.90,33.50,41.50],["Mediana","Grande","Familiar"],"../../assets/JoraCostillaBBQ.png"),
+    [32.00],["Personal"],"../../assets/JoraCostillaBBQ.png"),
     
     new Item(2,"Hamburguesa Jora","Combinación de lomo fino y churrasco acompañado de queso cheddar, tocino , cebolla caramelizadas, salsa de la casa y servido con papas nativas.",
-    [15.90,33.50,41.50],["Mediana","Grande","Familiar"],"../../assets/JoraHambuerguesa.png"),
+    [30.00],["Personal"],"../../assets/JoraHambuerguesa.png"),
   
   ]
 
   promociones: Item[]=[
     new Item(0,"Mondondo de la abuela"," ",
-    [30.99,33.99],["Mediana","Grande"],"../../assets/JoraMondogo.png"),
+    [30.00],["Personal"],"../../assets/JoraMondogo.png"),
 
     new Item(1,"Puca Picante Ayacuchano"," ",
-    [34.99,40.99],["Mediana","Grande"],"../../assets/JoraPuca.png")
+    [32.00],["Personal"],"../../assets/JoraPuca.png")
   ]
 
   extras: Item[]=[

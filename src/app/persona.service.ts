@@ -9,54 +9,34 @@ export class PersonaServicio {
   personas: Persona[] = [
     new Persona(
       1,
-      'Kevin',
-      'Santiago',
+      'Yon',
+      'Infanzon',
       999666555,
       71239980,
-      'kevin@hotmail.com',
-      '20/3/2000',
-      'Av. Brazil 325',
-      'pruebaContraseña1',
+      'yon@hotmail.com',
+      '05/02/2001',
+      'Av. Perú 95',
+      'contraCliente1',
       [
         new Pedido(
           1,
           [
-            new Item(0,"Pizza Hawaiana","Deliciosa Pizza con Piña",[16.00,32.00],["Mediana","Familiar"],"https://nuestrasrecetas.es/wp-content/uploads/2015/05/hawaiana.jpg"),
-            new Item(1,"Pizza Americana","Deliciosa Pizza con America",[14.00,30.00],["Mediana","Familiar"],"https://www.periodistadigital.com/wp-content/uploads/2020/02/pizza-americana.jpg")
+            new Item(0,"Chorizo Ayacuchano","Chorizo Ayacuchano",[32.00],["Personal"],"../../assets/JoraChorizo1.png"),
+            new Item(1,"Mondondo de la abuela","Mondongo de la abuela",[30.00],["Personal"],"../../assets/JoraMondogo.png")
           ],
           '02/02/2002',
           '9:30',
           'Urb. Jose Gabriel Condorcanqui 220'
         ),
-        new Pedido(
-          2,
-          [
-            new Item(1,"La segunda vuelta","Llevate una pizza no se que poner, inserteTexto()",
-            [35.00,35.00],["La Roja Suprema","La Carcelera"],"../../assets/La seguna vuelta.jpg"),
-            new Item(3,"Pizza Salami","Pizza con Salami :pog:",[14.00,30.00],["Mediana","Familiar"],"https://beta.da-antonio.be/wp-content/uploads/2018/11/salami.jpeg"),
-          ],
-          '02/02/2002',
-          '10:30',
-          "Jr. José Ortíz Vergara N° 14"
-        ),
-        new Pedido(
-          3,
-          [
-            new Item(0, "Pan al ajo","Rico pan al ajo JA",[6],["5 unidades"],"https://www.gourmet.cl/wp-content/uploads/2014/09/pan-de-ajo.jpg"),
-          ],
-          '03/02/2002',
-          '12:30',
-          "Calle El Nazareno Mz A lt 2"
-        ),
-      ]
+              ]
     ),
     new Persona(
       2,
-      'Jhamir',
-      'Quicanio',
+      'Miguel',
+      'Cornejo',
       95555236,
       71239555,
-      'Elbrayan@hotmail.com',
+      'cornejo@hotmail.com',
       '19/3/2000',
       'Jr. 3 mascaras 223',
       'pruebaContraseña2',
@@ -64,8 +44,8 @@ export class PersonaServicio {
         new Pedido(
           1,
           [
-            new Item(0,"Pizza Hawaiana","Deliciosa Pizza con Piña",[16.00,32.00],["Mediana","Familiar"],"https://nuestrasrecetas.es/wp-content/uploads/2015/05/hawaiana.jpg"),
-            new Item(1,"Pizza Americana","Deliciosa Pizza con America",[14.00,30.00],["Mediana","Familiar"],"https://www.periodistadigital.com/wp-content/uploads/2020/02/pizza-americana.jpg")
+            new Item(0,"Puca Picante Ayacuchano","Puca Picante Ayacuchano",[32.00],["Personal"],"../../assets/JoraPuca.png"),
+            new Item(1,"Hamburguesa Jora","Hamburguesa Jora",[30.00],["Personal"],"../../assets/JoraHambuerguesa.png")
           ],
           '02/02/2002',
           '9:30',
@@ -74,9 +54,8 @@ export class PersonaServicio {
         new Pedido(
           2,
           [
-            new Item(1,"La segunda vuelta","Llevate una pizza no se que poner, inserteTexto()",
-            [35.00,35.00],["La Roja Suprema","La Carcelera"],"../../assets/La seguna vuelta.jpg"),
-            new Item(3,"Pizza Salami","Pizza con Salami :pog:",[14.00,30.00],["Mediana","Familiar"],"https://beta.da-antonio.be/wp-content/uploads/2018/11/salami.jpeg"),
+            new Item(1,"Costilla BBQ","Costilla BBQ",[31.00],["Personal"],"../../assets/JoraCostillaBBQ.jpg"),
+            new Item(3,"Mondongo de la abuela","Mondongo de la abuela",[33.00],["Personal"],"../../assets/JoraMondogo.png"),
           ],
           '02/02/2002',
           '10:30',
@@ -85,7 +64,7 @@ export class PersonaServicio {
         new Pedido(
           3,
           [
-            new Item(0, "Pan al ajo","Rico pan al ajo JA",[6],["5 unidades"],"https://www.gourmet.cl/wp-content/uploads/2014/09/pan-de-ajo.jpg"),
+            new Item(0, "Langostino al Panko","Langostino 5 unidades",[15.50],["5 unidades"],"../../assets/JoraLangostino.png"),
           ],
           '03/02/2002',
           '12:30',
@@ -98,8 +77,8 @@ export class PersonaServicio {
   administradores: Persona[] = [
     new Persona(
       1,
-      'Amado',
-      'Martinez',
+      'Sohnny',
+      'Lima',
       8888774545,
       75684982,
       'theOne@hotmail.com',
