@@ -1,0 +1,15 @@
+.card {
+  height: 45vh;
+  max-height: 500px;
+}
+img {
+  height: 50%;
+}
+.card-body.d-flex.flex-column{
+  background-color: #515050;
+  color: white;
+}
+
+body{
+  background-color: #605B2A;
+}

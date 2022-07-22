@@ -1,0 +1,19 @@
+.imgProfile {
+    width:150px;
+    height:150px;
+    border-radius:75px;   
+}
+*{
+    font-family: "Rockwell";
+    font-size: 15px;
+    
+}
+
+.card.profile-card{
+    background-color: #46450D;
+    color: white;
+}
+.card-body{
+    background-color: #46450D;
+    color: white;
+}

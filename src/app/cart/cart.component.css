@@ -1,0 +1,47 @@
+.card-body{
+    text-align: center;
+}
+.card.mb-2{
+    background-color: #656420;
+}
+.card.mb-0{
+    background-color: #656420;
+}
+.card.mb-12{
+    background-color: #515050
+}
+
+.modal-header{
+    background-color: #46450D;
+}
+.container{
+    background-color: #53593F;
+}
+.modal-footer{
+    background-color: #46450D;
+}
+.modal-body{
+    background-color: #53593F;
+}
+
+#total{
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+#totaltitulo{
+    margin-right: 1.5vw;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+h5{
+    color: white;
+}
+
+.btn.btn-success{
+    background-color: #4B5F1E;
+    border-color: #4B5F1E;
+}
