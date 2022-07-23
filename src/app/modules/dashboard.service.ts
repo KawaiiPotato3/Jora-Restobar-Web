@@ -48,21 +48,18 @@ export class DashboardService {
   bigChart() {
     return [
     {
-      name: 'Hawaiana',
-      data: [22, 35, 30, 40, 33, 37, 42, 40]
+      name: 'Puca Picante',
+      data: [23, 30, 40, 30, 25, 15, 24, 40]
     }, {
-      name: 'La segunda Vuelta',
-      data: [25, 28, 20, 19, 23, 28, 25, 30]
+      name: 'Mondongo de la abuela',
+      data: [15, 14, 45, 23, 23, 28, 25, 30]
     }, {
-      name: 'Pan al ajo',
+      name: 'Langostino al panko',
       data: [18, 15, 20, 23, 18, 15, 19, 23]
     }, {
-      name: 'Las picositas',
+      name: 'Costillas BBQ',
       data: [12, 19, 18, 20, 15, 14, 18, 17]
-    }, {
-      name: 'Americana',
-      data: [11, 8, 16, 18, 13, 14, 15, 19]
-    }];
+    }]
   }
 
   cards() {
